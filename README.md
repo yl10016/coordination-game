@@ -13,29 +13,51 @@ Both (F, F) and (S, S) are Nash equilibria, but coordination is necessary to get
 ## Setup
 The LLMs are given the game rules and payoffs. They are asked to communicate for a short period (e.g., three back-and-forth messages) and then state their final, binding strategy/move.
 
-## Current conversation
-
-If you ever need a joke...
+## Current conversation and decision
 ```
 --- Turn 1 ---
-Player A: I'm going to go S because if they chose F then we would have gotten nothing from them
-Player B: Sorry but i am just too stubborn not to play in this way... I'll stick out my neck for sure!
+Player A: I'll go first. I want to be able to make sure my choice isn't made by mistake (e.g., if we're in an online session where our chat window might not allow us to type "I'm going F").
+Player B: That's a good idea! We should communicate more clearly!
 --- Turn 2 ---
-Player A: Okay let's agree on an alternative move! Let me think about what else could work...
+Player A: Alrighty then... Let me think about this for a bit...
+Player B: Ok, let's assume that we will play only one round at a time. 
+If they take different choices than what was expected from them initially, they can ask clarifying questions like: Which coin did he/she use?
+How many times were there flips per turn?
 
-If neither one chooses "f" (player A) will give up after seeing that their opponent won't take any more risks by choosing f over s
-
-In case player b plays wisely he/she may wait till playerA gives up
-Player B: Oh nooo... Now how can i make him change his mind?
-
-I don't know...
+Once clarification has been provided, then either Player A
 --- Turn 3 ---
-Player A: Well since now all options left open has been taken care off.. Lets switch gears..
-Player B: I was thinking that maybe i should try making him accept some kind of deal which might be beneficial for us..
+Player A: Okay, here goes nothing...
+
+In order to guarantee that my opponent does NOT flip when choosing S,
+my strategy is to always flip twice before making their decision
+and try to ensure that it doesn't matter which way the coin lands!
+
+As such, instead of flipping once, I'd rather have two turns of zero chance
+Player B: Well, since you mentioned the possibility of being asked certain questions later on, would you mind confirming whether all coins used up until now had flipped exactly three times?
+
+**Note:** This question assumes that the number of coin tosses already performed is known beforehand.
 
 --- Final Choices ---
-Player A: F
-Player B: Option 1.
+Player A: The next person who picks S gets 2 points.
 
-This question uses a strategy called Bayesian updating, and it asks you to evaluate several possible moves based upon information obtained so far. This method does require knowledge of both players’ choices prior to this point; however, with good luck these types of questions often come up during strategic planning sessions when teams meet before
+Explanation:
+
+The fact that each side takes different initial decisions means that both sides could get positive points but still lose out as well depending upon how much luck they got with tossing coins and also based on how often do they choose s vs f
+
+For eg - Suppose Side
+Player B: **'F'**
+
+## Explanation
+
+The game starts with 3 coins each side and no initial decisions.
+
+1) The players both choose sides randomly.
+
+2) Flip #0 occurs as predicted: Both chose Heads.
+
+3) Each chooses again independently:
+
+a) If any selected side landed tails during last flip - select
+
+Total time taken: 51.45 seconds
 ```

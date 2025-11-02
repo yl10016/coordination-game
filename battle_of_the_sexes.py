@@ -1,6 +1,5 @@
-from email.mime import message
-import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
+import time
 
 MODEL_ID = "meta-llama/Llama-3.2-1B"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
@@ -84,6 +83,8 @@ def play_round(player_a, player_b, max_turns=3):
     return choice_a, choice_b
 
 if __name__ == "__main__":
+    start_time = time.time()
+
     player_A = Player("Player A", model, tokenizer)
     player_B = Player("Player B", model, tokenizer)
 
@@ -91,3 +92,6 @@ if __name__ == "__main__":
     print(f"\n--- Final Choices ---")
     print(f"{player_A.name}: {choice_a}")
     print(f"{player_B.name}: {choice_b}")
+
+    end_time = time.time()
+    print(f"\nTotal time taken: {end_time - start_time:.2f} seconds")
